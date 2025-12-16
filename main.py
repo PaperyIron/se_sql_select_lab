@@ -57,7 +57,7 @@ df_name_length = pd.read_sql_query("""
 # STEP 7
 # Replace None with your code
 df_short_title = pd.read_sql_query("""
-    SELECT SUBSTRING(jobTitle, 1, 2) AS short_title
+    SELECT substr(jobTitle, 1, 2) AS short_title
     FROM employees
 """, conn)
 
@@ -89,3 +89,4 @@ df_day_month_year = pd.read_sql_query("""
 # Add the code below and run the file to see order details data
 
 
+conn.close()
